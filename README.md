@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 # Manal's Project
 
