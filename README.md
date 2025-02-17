@@ -1,3 +1,4 @@
+
 # Manal's Project
 
 This repository will document my learning journey as I build my skills to become a skilled backend software engineer, focused mainly on Java and other backend technologies.
@@ -21,3 +22,4 @@ Useful links:
 * [Markdown Reference](https://www.markdownguide.org/cheat-sheet/)
                                                                             
 
+>>>>>>> 0943dd7fbe7c8bfbb4f12e9b40cd09703a28d910
