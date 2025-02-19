@@ -1,5 +1,6 @@
-package com.kalschatzi;
+package test.java.com.kalschatzi;
 
+import main.java.com.kalschatzi.Main;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
