@@ -70,8 +70,8 @@ We want to review day to day tools that we use:
            but not in your local repository. Whenever you run the git push command, Git has a look at your local repository
            and copies to the remote side whatever is missing. This includes commits, trees, blobs, and tags (the last of 
            which are not pushed by default). After copying the missing content, Git attempts to overwrite the current 
-           master with the latest commit. This overwrite is allowed if the change is a “fast forward”, that is, if the old
-           master commit is an ancestor of the new master commit.
+           main with the latest commit. This overwrite is allowed if the change is a “fast forward”, that is, if the old
+           main commit is an ancestor of the new main commit.
            Git force push is rarely the best approach to the problem.
 
            There are 2 big reasons for this:
@@ -79,7 +79,7 @@ We want to review day to day tools that we use:
              1. There’s a high chance you overwrite commits from your colleagues, resulting in lost work;
              2. There’s a high chance your colleagues will be developing their work based on the old commit history.
   
-     - **Creating PRs and merging to master**
+     - **Creating PRs and merging to main**
        - Type of merges?
          - **Regular merge** - `git merge` is used to combine two branches.
     
@@ -105,7 +105,7 @@ We want to review day to day tools that we use:
              - when changes are packed into a single commit, it makes the code review process much easier.
              - Here are the steps to perform a squash merge:
 
-                1. **Checkout to the Base Branch**: Make sure you are on the branch you want to merge into. **`git checkout master`**.
+                1. **Checkout to the Base Branch**: Make sure you are on the branch you want to merge into. **`git checkout main`**.
 
                 2. **Perform the Squash Merge**: Use the **`git merge --squash`** command followed by the feature branch name.
                    **`git merge --squash feature-branch`**
