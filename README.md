@@ -21,5 +21,3 @@ Ways of working - Issues will be worked on as assigned by mentor and weekly prog
 Useful links:
 * [Markdown Reference](https://www.markdownguide.org/cheat-sheet/)
                                                                             
-
->>>>>>> 0943dd7fbe7c8bfbb4f12e9b40cd09703a28d910
