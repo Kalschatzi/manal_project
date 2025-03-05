@@ -1,7 +1,7 @@
-package com.kalschatzi;
+package main.java.com.kalschatzi;
 
+import java.util.ArrayList;
 import java.util.List;
-import com.google.common.collect.ImmutableList;
 
 public class Main {
     public static void main(String args []) {
@@ -13,8 +13,11 @@ public class Main {
     }
 
     public static String ImmutableListMethod() {
-        List<String> list = ImmutableList.of("A", "B", "C");
+        List<String> list = List.of("A", "B", "C");
         return list.get(0);
     }
+
+
+
 }
 
