@@ -1,4 +1,4 @@
-package main.java.com.kalschatzi;
+package com.kalschatzi;
 
 // Library class to demonstrate Arraylist implementation
 import java.util.ArrayList;
@@ -8,10 +8,10 @@ import java.util.List;
 
 public class Library {
     private final String LIBRARYNAME = "Glasgow Library"; // set default library name
-    private ArrayList<Book> libraryCatalogue;
+    private List<Book> libraryCatalogue;
 
     public Library(){
-        this.libraryCatalogue = new ArrayList<>();
+        this.libraryCatalogue = new Arraylist2<>();
     }
 
     // method that adds books to library catalogue

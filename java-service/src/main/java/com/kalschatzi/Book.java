@@ -1,4 +1,4 @@
-package main.java.com.kalschatzi;
+package com.kalschatzi;
 
 // Book class to demonstrate Arraylist
 

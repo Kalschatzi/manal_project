@@ -1,8 +1,8 @@
-package main.java.com.kalschatzi;
-import java.util.Arrays;
-import java.util.ArrayList;
+package com.kalschatzi;
+import java.util.*;
+
 // Arraylist implementation
-public class Arraylist2<E> { // generic type 'E' allowing the arraylist to store any object
+public class Arraylist2<E> implements List<E> { // generic type 'E' allowing the arraylist to store any object
 
     private static final int Initial_CAPACITY = 10;
     private Object[] elements;
@@ -15,9 +15,41 @@ public class Arraylist2<E> { // generic type 'E' allowing the arraylist to store
     }
 
     // add an element to the end of the arraylist
-    public void add(E element){
+    @Override
+    public boolean add(E element){
         ensureCapacity(); // ensures capacity before adding elements
         elements[size++] = element;
+        return true; //TODO fixme
+    }
+
+    @Override
+    public boolean remove(Object o) {
+        return false;
+    }
+
+    @Override
+    public boolean containsAll(Collection<?> c) {
+        return false;
+    }
+
+    @Override
+    public boolean addAll(Collection<? extends E> c) {
+        return false;
+    }
+
+    @Override
+    public boolean addAll(int index, Collection<? extends E> c) {
+        return false;
+    }
+
+    @Override
+    public boolean removeAll(Collection<?> c) {
+        return false;
+    }
+
+    @Override
+    public boolean retainAll(Collection<?> c) {
+        return false;
     }
 
     // Inserting an element at a specific index (also, example of method overloading)
@@ -30,6 +62,36 @@ public class Arraylist2<E> { // generic type 'E' allowing the arraylist to store
         System.arraycopy(element, index, elements, index + 1, size - index);
         elements[index] = element;
         size++;
+    }
+
+    @Override
+    public E remove(int index) {
+        return null;
+    }
+
+    @Override
+    public int indexOf(Object o) {
+        return 0;
+    }
+
+    @Override
+    public int lastIndexOf(Object o) {
+        return 0;
+    }
+
+    @Override
+    public ListIterator<E> listIterator() {
+        return null;
+    }
+
+    @Override
+    public ListIterator<E> listIterator(int index) {
+        return null;
+    }
+
+    @Override
+    public List<E> subList(int fromIndex, int toIndex) {
+        return List.of();
     }
 
     // private method to ensure capacity for adding new elements
@@ -48,6 +110,11 @@ public class Arraylist2<E> { // generic type 'E' allowing the arraylist to store
         return (E) elements[index]; // why do we need to cast to type E?
     }
 
+    @Override
+    public E set(int index, E element) {
+        return null;
+    }
+
     // get the number of elements in the list
     public int size(){
         return size;
@@ -58,6 +125,26 @@ public class Arraylist2<E> { // generic type 'E' allowing the arraylist to store
         return size == 0;
     }
 
+    @Override
+    public boolean contains(Object o) {
+        return false;
+    }
+
+    @Override
+    public Iterator<E> iterator() {
+        return null;
+    }
+
+    @Override
+    public Object[] toArray() {
+        return new Object[0];
+    }
+
+    @Override
+    public <T> T[] toArray(T[] a) {
+        return null;
+    }
+
     // remove all elements from the list
     public void clear(){
         // set all elements to null to help garbage collection
@@ -66,6 +153,4 @@ public class Arraylist2<E> { // generic type 'E' allowing the arraylist to store
         }
         size = 0;
     }
-
-
 }
