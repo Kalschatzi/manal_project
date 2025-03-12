@@ -1,115 +1,138 @@
-package main.java.com.kalschatzi;
+package com.kalschatzi;
 
-public class DoublyLinkedlist {
+import org.w3c.dom.Node;
 
- public static void main(String[] args) {
+import java.util.NoSuchElementException;
 
-     class Node{
-         // stores data
-         public int data;
-         // pointer to the next node
-         public Node next;
-         // pointer to the previous node
-         public Node prev;
-         // representing the head of a DLL
-         Node head = null;
-         // representing the tail of a DLL
-         Node tail = null;
+public class DoublyLinkedlist<T> {
+    private Node<T> head;
+    private Node<T> tail;
+    private int size;
 
-         public Node(int val, Node head, Node tail) {
-             this.data = val;
-             this.head = head;
-             this.tail = tail;
-         }
+    private static class Node<T>{
+        private T data;
+        private Node<T> next;
+        private Node<T> prev;
 
-         // Function to add a node in the front of doubly linked list
-         public void addNodeFront(int val) {
-             // Creating a new node
-             Node temp = new Node(val, head, null);
-             // checking if head is null
-             if(head != null )
-             {
-                 // Assigning temp to head.prev
-                 head.prev = temp;
-             }
+        Node(T data){
+            this.data = data;
+        }
+    }
 
-             // Assigning temp to head
-             head = temp;
-             // Checking if tail is null
-             if(tail == null)
-             {
-                 // Assigning temp to tail
-                 tail = temp;
-             }
-             System.out.println("New node added: " + val);
-         }
+    public void addFront(T val){ // Function to add a node in the front of doubly linked list
+        Node<T> temp = new Node<>(val);
+        if (head == null){
+            head = tail = temp;
+        }
+        else {
+            temp.next = head;
+            head.prev = temp;
+            head = temp;
+        }
+        size ++;
+    }
 
-         // Function to add a node in the back of doubly linked list
-         public void addNodeBack(int val) {
-             // Creating a new node
-             Node temp = new Node(val, null, tail);
-             // Checking if tail is null
-             if(tail != null)
-             {
-                 // Assigning temp to tail.next
-                 tail.next = temp;
-             }
-             // Assigning temp to tail
-             tail = temp;
-             // Checking if head is null
-             if(head == null)
-             {
-                 // Assigning temp to head
-                 head = temp;
-             }
-             System.out.println("New node added: " + val);
-         }
+    public void addBack(T val){
+        Node<T> temp = new Node<>(val);
+        if (tail == null){
+            head = tail = temp;
+        }
+        else{
+            temp.prev = tail;
+            tail.next = temp;
+            tail = temp;
+        }
+        size ++;
+    }
 
-         // iterating through DLL - forward iteration
-         public void iterateForward(){
-             Node temp = head;
-             while(temp != null){
-                 System.out.println(temp.data);
-                 temp = temp.next;
-             }
-         }
+    public T removeFront(){
+        if (isEmpty()){
+            throw new NoSuchElementException("List is empty");
+        }
+        T data = head.data;
+        head = head.next;
+        if(head == null){
+            tail = null;
+        }
+        else{
+            head.prev = null;
+        }
+        size --;
+        return data;
+    }
 
-         // iterating through DLL - backwards iteration
-         public void iterateBackward(){
-             Node temp = tail;
-             while(temp != null){
-                 System.out.println(temp.data);
-                 temp = temp.prev;
-             }
-         }
+    public T removeBack(){
+        if (isEmpty()){
+            throw new NoSuchElementException("List is empty");
+        }
+        T data = tail.data;
+        tail = tail.prev;
+        if (tail == null){
+            head = null;
+        }
+        else {
+            tail.next = null;
+        }
+        size --;
+        return data;
+    }
 
-         // deleting items from front of a DLL
-         public int removeNodeFront() {
-             // assigning head to temp
-             Node temp = head;
-             // assigning the next pointer to the head
-             // and setting the prev pointer of head to null
-             head = head.next;
-             head.prev = null;
-             System.out.println("deleted: " + temp.data);
-             // Returning the deleted item
-             return temp.data;
-         }
+    public void iterateForward(){
+        Node<T> temp = head;
+        while (temp != null){
+            System.out.println(temp.data);
+            temp = temp.next;
+        }
+    }
 
-         // Function to remove the last node
-         public int removeNodeBack() {
-             // assigning tail to temp
-             Node temp = tail;
-             // assigning the prev pointer to the tail
-             // and setting the next pointer of tail to null
-             tail = tail.prev;
-             tail.next = null;
-             System.out.println("deleted: " + temp.data);
-             // Returning the deleted item
-             return temp.data;
-         }
+    public void interateBackword(){
+        Node<T> temp = tail;
+        while (temp != null){
+            System.out.println(temp.data);
+            temp = temp.prev;
+        }
+    }
 
-     }
+    public int getSize(){
+        return size;
+    }
+
+    public boolean isEmpty(){
+        return size == 0;
+    }
+
+    public boolean contains(T element){
+        Node<T> current = head;
+        while (current != null){
+            if (current.data.equals(element)){
+                return true;
+            }
+            current = current.next;
+        }
+        return false;
+    }
+
+    public  T getElement(int index){ // returns the element at a specific index
+        if (index < 0 || index >= size){
+            throw new IndexOutOfBoundsException("Index" + index + " is out of bounds");
+        }
+        Node<T> current = head;
+        for (int i = 0; i < index; i++){
+            current = current.next;
+        }
+        return current.data;
+    }
+
+    public void clear(){
+        head = null;
+        tail = null;
+        size = 0;
+    }
+
+
+
+
+
 
  }
-}
+
