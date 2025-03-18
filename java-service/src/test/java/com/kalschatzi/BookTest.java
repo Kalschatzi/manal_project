@@ -1,5 +1,5 @@
-package test.java.com.kalschatzi;
-import main.java.com.kalschatzi.Book;
+package com.kalschatzi;
+import com.kalschatzi.Book;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

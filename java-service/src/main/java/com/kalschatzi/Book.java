@@ -1,4 +1,4 @@
-package main.java.com.kalschatzi;
+package com.kalschatzi;
 
 // Book class to demonstrate Arraylist
 
@@ -77,10 +77,6 @@ public class Book {
                 ", Year Published: '" + yearPublished + '\'' +
                 ", Checked out?: '" + isCheckedOut + '\'' ;
     }
+}
 
-    public static void main(String[] args) {
-        Book book = new Book("1984", "George Orwell", 1949);
-        System.out.println(book.toString());
-    }
 
-    }

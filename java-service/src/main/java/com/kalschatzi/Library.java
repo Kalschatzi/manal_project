@@ -1,29 +1,37 @@
-package main.java.com.kalschatzi;
-
-// Library class to demonstrate Arraylist implementation
+package com.kalschatzi;
+import com.kalschatzi.Book;
+import com.kalschatzi.Arraylist2;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Collections;
+
+// Library class to demonstrate Arraylist implementation
 
 public class Library {
     private final String LIBRARYNAME = "Glasgow Library"; // set default library name
-    private ArrayList<Book> libraryCatalogue;
+    private List<Book> libraryCatalogue;
 
     public Library(){
-        this.libraryCatalogue = new ArrayList<>();
+
+        this.libraryCatalogue = new Arraylist2<>();
     }
 
     // method that adds books to library catalogue
     public void addBook(Book book){
         libraryCatalogue.add(book);
         System.out.println("Added: " + book.getTitle());
-
     }
 
     // method that removes book from library catalogue
     public void removeBook(String title){
-        libraryCatalogue.removeIf(book -> book.getTitle().equals(title));
+        for (int i = 0; i < libraryCatalogue.size(); i++){
+            if (libraryCatalogue.get(i).getTitle().equals(title)){
+                libraryCatalogue.remove(i);
+                break;
+            }
+
+    }
     }
 
     // method that finds book by title
@@ -39,8 +47,8 @@ public class Library {
     // method that displays full library catalogue
     public void displayCatalogue(){
         System.out.println("Full catalogue at " + LIBRARYNAME + ":");
-        for (Book book : libraryCatalogue){
-            System.out.println(book);
+        for (int i =0; i < libraryCatalogue.size(); i++){
+            System.out.println(libraryCatalogue.get(i));
         }
     }
 
@@ -57,8 +65,9 @@ public class Library {
 
     // method that returns all available books(not checked out)
     public List<Book> getAvailableBooks(){
-        List<Book> availableBooks = new ArrayList<>();
-        for (Book book : libraryCatalogue){
+        List<Book> availableBooks = new Arraylist2<Book>();
+        for (int i = 0; i < libraryCatalogue.size(); i++){
+            Book book = libraryCatalogue.get(i);
             if (!book.getIsCheckedOut()){
                 availableBooks.add(book);
             }
