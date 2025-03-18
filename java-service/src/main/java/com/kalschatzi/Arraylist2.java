@@ -61,9 +61,9 @@ public class Arraylist2<E> implements List<E>{ // generic type 'E' allowing the 
         int numMoved = size - index;
         if(numMoved > 0)
             System.arraycopy(elements, index, elements, index + numNew, numMoved);
-            System.arraycopy(a, 0, elements, index, numNew);
-            size += numNew;
-            return numNew != 0;
+        System.arraycopy(a, 0, elements, index, numNew);
+        size += numNew;
+        return numNew != 0;
 
     }
 
@@ -330,16 +330,7 @@ public class Arraylist2<E> implements List<E>{ // generic type 'E' allowing the 
             throw new IndexOutOfBoundsException("Index out of bounds!");
     }
 
-
-
-
-
-
-
-
-
-
-    }
+}
 
 
 

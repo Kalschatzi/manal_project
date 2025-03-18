@@ -31,7 +31,7 @@ public class Library {
                 break;
             }
 
-    }
+        }
     }
 
     // method that finds book by title
