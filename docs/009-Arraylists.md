@@ -12,7 +12,7 @@ Syntax of an arraylist:
 `ArrayList<Integer> arr = new ArrayList<Integer>();`
 
 Example of how to create an arraylist:
-```
+```java
 import java.util.ArrayList; // import the ArrayList class
 
 ArrayList<String> cars = new ArrayList<String>(); // Create an ArrayList object
@@ -26,7 +26,7 @@ an equivalent wrapper class: Integer. For other primitive types, use: 'Boolean' 
 Basic arraylist operations:
 
 - Adding items to the arraylist - `add()`method
-    ```
+    ```java
     import java.util.ArrayList;
     
     public class Main {
@@ -42,7 +42,7 @@ Basic arraylist operations:
     ```
 
 - Adding an item at a specific index:
-    ```
+    ```java
     import java.util.ArrayList;
     
     public class Main {

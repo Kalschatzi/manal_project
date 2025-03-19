@@ -2,6 +2,8 @@ package com.kalschatzi;
 
 import org.w3c.dom.Node;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.NoSuchElementException;
 
 public class DoublyLinkedlist<T> {
@@ -77,20 +79,24 @@ public class DoublyLinkedlist<T> {
         return data;
     }
 
-    public void iterateForward(){
+    public List<T> iterateForward(){
+        List<T> result = new ArrayList<>();
         Node<T> temp = head;
         while (temp != null){
-            System.out.println(temp.data);
+            result.add(temp.data);
             temp = temp.next;
         }
+        return result;
     }
 
-    public void interateBackword(){
+    public List<T> interateBackword(){
+        List<T> result = new ArrayList<>();
         Node<T> temp = tail;
         while (temp != null){
-            System.out.println(temp.data);
+            result.add(temp.data);
             temp = temp.prev;
         }
+        return result;
     }
 
     public int getSize(){

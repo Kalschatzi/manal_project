@@ -1,30 +1,24 @@
-package test.java.com.kalschatzi;
+package com.kalschatzi;
 
-
-
-import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class ArraylistTest {
 
 
     @Test
-    public void confirmArraylistSize(){
+    public void confirmArraylistSize() {
         ArrayList<String> myShoppingList = new ArrayList<>();
         // Assuming initial size when the arraylist is first created is 0
-        Assert.assertEquals(0, myShoppingList.size());
+        assertEquals(0, myShoppingList.size());
         // adding 1 item to arraylist
         myShoppingList.add("Milk");
-        Assert.assertEquals(1, myShoppingList.size());
-
+        assertEquals(1, myShoppingList.size());
     }
-
-
-
 }
 
 
