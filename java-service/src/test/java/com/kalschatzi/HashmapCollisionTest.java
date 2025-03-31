@@ -1,11 +1,9 @@
 package com.kalschatzi;
 
 import org.junit.jupiter.api.Test;
-import com.kalschatzi.Key;
 import java.util.HashMap;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 
 public class HashmapCollisionTest {
@@ -16,8 +14,8 @@ public class HashmapCollisionTest {
         HashMap<Key, String> map = new HashMap<>();
 
         // Create keys with the same hash code
-        com.kalschatzi.Key key1 = new com.kalschatzi.Key("key1");
-        com.kalschatzi.Key key2 = new com.kalschatzi.Key("key2");
+        Key key1 = new Key("key1");
+        Key key2 = new Key("key2");
 
         // insert values into hashmap
         map.put(key1, "Value for key1");
