@@ -1,6 +1,6 @@
 package com.kalschatzi;
 
-import main.java.com.kalschatzi.OOP.Animal;
+import com.kalschatzi.OOP.Animal;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
