@@ -1,4 +1,4 @@
-package com.kalschatzi;
+package test.java.com.kalschatzi;
 
 import org.junit.jupiter.api.Test;
 
@@ -8,12 +8,12 @@ public class MainTest {
 
     @Test
     public void TestStaticMethodReturn() {
-        assertEquals("HELLO, I'M A STRING!", Main.StaticMethod());
+        assertEquals("HELLO, I'M A STRING!", com.kalschatzi.Main.StaticMethod());
     }
 
     @Test
     public void TestImmutableListGet() {
-        assertEquals("A", Main.ImmutableListMethod());
+        assertEquals("A", com.kalschatzi.Main.ImmutableListMethod());
     }
 
 }
