@@ -1,4 +1,4 @@
-package main.java.com.kalschatzi.OOP;
+package com.kalschatzi.OOP;
 // Shape class demonstrating Inheritance
 
 public class Shape {

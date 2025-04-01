@@ -1,7 +1,7 @@
-package main.java.com.kalschatzi.OOP;
+package com.kalschatzi.OOP;
 // Airplane child class to demonstrate polymorphism
 
-public class Airplane extends Vehicle{
+public class Airplane extends Vehicle {
     private String manufacturer;
     private int seats;
     private boolean privatejet;
@@ -47,11 +47,7 @@ public class Airplane extends Vehicle{
         System.out.println("Airplane is flying at " + altitude + " feet");
     }
 
-    public static void main(String[] args) {
-        Airplane airplane = new Airplane(2020, "Boeing", 200, false);
-        airplane.move();
-        airplane.move(30000);
-    }
+
 
 
 

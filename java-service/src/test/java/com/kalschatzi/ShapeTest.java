@@ -1,7 +1,7 @@
-package test.java.com.kalschatzi;
+package com.kalschatzi;
 
-import main.java.com.kalschatzi.OOP.Circle;
-import main.java.com.kalschatzi.OOP.Shape;
+import com.kalschatzi.OOP.Circle;
+import com.kalschatzi.OOP.Shape;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

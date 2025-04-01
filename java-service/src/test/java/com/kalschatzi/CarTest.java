@@ -1,14 +1,14 @@
-package test.java.com.kalschatzi;
+package com.kalschatzi;
 
-import main.java.com.kalschatzi.OOP.Car;
-import main.java.com.kalschatzi.OOP.Vehicle;
+import com.kalschatzi.OOP.Car;
+import com.kalschatzi.OOP.Vehicle;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CarTest {
 

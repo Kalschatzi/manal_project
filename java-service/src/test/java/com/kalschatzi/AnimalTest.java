@@ -1,4 +1,4 @@
-package test.java.com.kalschatzi;
+package com.kalschatzi;
 
 import main.java.com.kalschatzi.OOP.Animal;
 import org.junit.jupiter.api.Test;

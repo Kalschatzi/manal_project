@@ -1,4 +1,4 @@
-package main.java.com.kalschatzi.OOP;
+package com.kalschatzi.OOP;
 
 // Inheritance example continues
 public class Circle extends Shape {

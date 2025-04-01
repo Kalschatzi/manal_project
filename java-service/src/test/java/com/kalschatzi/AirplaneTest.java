@@ -1,7 +1,7 @@
-package test.java.com.kalschatzi;
+package com.kalschatzi;
 
-import main.java.com.kalschatzi.OOP.Airplane;
-import main.java.com.kalschatzi.OOP.Vehicle;
+
+import com.kalschatzi.OOP.Airplane;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;

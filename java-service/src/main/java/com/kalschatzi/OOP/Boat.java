@@ -1,4 +1,4 @@
-package main.java.com.kalschatzi.OOP;
+package com.kalschatzi.OOP;
 // Boat child class to demonstrate polymorphism
 
 public class Boat extends Vehicle{

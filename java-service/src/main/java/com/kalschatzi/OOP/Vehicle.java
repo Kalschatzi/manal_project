@@ -1,4 +1,4 @@
-package main.java.com.kalschatzi.OOP;
+package com.kalschatzi.OOP;
 
 // Vehicle parent class to demonstrate polymorphism
 public abstract class Vehicle {

@@ -1,4 +1,4 @@
-package main.java.com.kalschatzi.OOP;
+package com.kalschatzi.OOP;
 // Animal class demonstrating encapsulation
 public class Animal {
 
