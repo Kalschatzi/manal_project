@@ -1,11 +1,14 @@
+
 package com.kalschatzi;
 
 // Book class to demonstrate Arraylist
+
 
 public class Book {
 
     private String title;
     private String author;
+
     private int yearPublished;
     private boolean isCheckedOut;
 
@@ -15,6 +18,7 @@ public class Book {
         this.author = author;
         this.yearPublished = yearPublished;
         this.isCheckedOut = false; // initialise as false as every book starts off not checked out
+
     }
 
     public String getTitle() {
@@ -32,6 +36,7 @@ public class Book {
     public void setAuthor(String author) {
         this.author = author;
     }
+
 
     public int getYearPublished() {
         return yearPublished;
@@ -78,5 +83,6 @@ public class Book {
                 ", Checked out?: '" + isCheckedOut + '\'' ;
     }
 }
+
 
 
