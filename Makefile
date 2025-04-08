@@ -1,16 +1,34 @@
 .PHONY: clean-java
 clean-java:
-	cd java-service && ./gradlew :clean -x test
+	./gradlew :java-service:clean -x test
 
 .PHONY: build-java
 build-java: clean-java
-	cd java-service && ./gradlew :build -x test
+	./gradlew :java-service::build -x test
 
 .PHONY: test-java
 test-java:
-	cd java-service && ./gradlew :test
+	./gradlew :java-service::test
 
 
 .PHONY: run-java
 run-java:
-	cd java-service && ./gradlew :run
+	./gradlew :java-service::run
+
+## SpringBoot
+.PHONY: clean-spring
+clean-spring:
+	 ./gradlew :springboot-app:clean -x test
+
+.PHONY: build-spring
+build-spring: clean-spring
+	./gradlew :springboot-app:build -x test
+
+.PHONY: test-spring
+test-spring:
+	./gradlew :springboot-app:test
+
+
+.PHONY: run-spring
+run-spring:
+	./gradlew :springboot-app:bootRun

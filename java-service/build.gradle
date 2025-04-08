@@ -28,11 +28,6 @@ dependencies {
     implementation project(':springboot-app')
 }
 
-java {
-    toolchain {
-        languageVersion.set(JavaLanguageVersion.of(21))
-    }
-}
 
 test {
     useJUnitPlatform()
