@@ -1,24 +1,9 @@
-// build.gradle
+wrapper {
+    gradleVersion = 8.12
+}
 
-allprojects {
-    group = 'com.kalschatzi'
-    version = '1.0.0'
-
-    repositories {
-        mavenCentral()
+task testPrint{
+    doLast {
+        println("This is a test")
     }
 }
-
-subprojects {
-    apply plugin: 'java'
-
-    sourceCompatibility = JavaVersion.VERSION_21
-    targetCompatibility = JavaVersion.VERSION_21
-}
-
-wrapper{
-    gradleVersion = '8.13'
-}
-
-
-

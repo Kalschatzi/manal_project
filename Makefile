@@ -4,16 +4,16 @@ clean-java:
 
 .PHONY: build-java
 build-java: clean-java
-	./gradlew :java-service::build -x test
+	./gradlew :java-service:build -x test
 
 .PHONY: test-java
 test-java:
-	./gradlew :java-service::test
+	./gradlew :java-service:test
 
 
 .PHONY: run-java
 run-java:
-	./gradlew :java-service::run
+	./gradlew :java-service:run
 
 ## SpringBoot
 .PHONY: clean-spring
