@@ -1,3 +1,5 @@
 .idea/*
-java-service/.gradle/
+.gradle
+build/
+springboot-app/build/
 java-service/build/
