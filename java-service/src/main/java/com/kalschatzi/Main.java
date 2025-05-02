@@ -9,7 +9,7 @@ public class Main {
         FamilyTree treeBuilder = new FamilyTree();
         FamilyTreeNode root = treeBuilder.buildFamilyTree();
 
-        FamilyTreePrinter.printFamilyTree(root);
+        FamilyTreePrinter.printFamilyTree(root, 0);
 
 
     }
