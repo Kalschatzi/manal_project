@@ -1,0 +1,15 @@
+logging:
+  level:
+    org.flywaydb: DEBUG
+spring:
+  application.name: springboot-app
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+  flyway:
+    locations: classpath:/db/migration
+    enabled: true
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/flight_positions
+    username: postgres
+    password: password
