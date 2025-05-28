@@ -1,0 +1,4 @@
+rootProject.name = 'manal-project'
+
+include 'java-service'
+include 'springboot-app'
