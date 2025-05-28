@@ -1,4 +1,4 @@
-package com.Kalschatzi.springboot_app.model;
+package com.Kalschatzi.springbootapp.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

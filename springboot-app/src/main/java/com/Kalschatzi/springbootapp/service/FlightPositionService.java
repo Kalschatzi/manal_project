@@ -1,7 +1,7 @@
-package com.Kalschatzi.springboot_app.Service;
+package com.Kalschatzi.springbootapp.service;
 
-import com.Kalschatzi.springboot_app.Repository.FlightPositionRepo;
-import com.Kalschatzi.springboot_app.model.FlightPosition;
+import com.Kalschatzi.springbootapp.repository.FlightPositionRepo;
+import com.Kalschatzi.springbootapp.model.FlightPosition;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

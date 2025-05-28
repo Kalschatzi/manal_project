@@ -1,6 +1,6 @@
-package com.Kalschatzi.springboot_app.Repository;
+package com.Kalschatzi.springbootapp.repository;
 
-import com.Kalschatzi.springboot_app.model.FlightPosition;
+import com.Kalschatzi.springbootapp.model.FlightPosition;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

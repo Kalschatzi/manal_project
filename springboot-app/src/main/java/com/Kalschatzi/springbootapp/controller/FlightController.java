@@ -1,7 +1,7 @@
-package com.Kalschatzi.springboot_app.Controller;
+package com.Kalschatzi.springbootapp.controller;
 
-import com.Kalschatzi.springboot_app.Service.FlightService;
-import com.Kalschatzi.springboot_app.model.Flight;
+import com.Kalschatzi.springbootapp.service.FlightService;
+import com.Kalschatzi.springbootapp.model.Flight;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;

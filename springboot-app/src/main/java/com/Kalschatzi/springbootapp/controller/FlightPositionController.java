@@ -1,9 +1,7 @@
-package com.Kalschatzi.springboot_app.Controller;
+package com.Kalschatzi.springbootapp.controller;
 
-import com.Kalschatzi.springboot_app.Service.FlightPositionService;
-import com.Kalschatzi.springboot_app.Service.FlightService;
-import com.Kalschatzi.springboot_app.model.Flight;
-import com.Kalschatzi.springboot_app.model.FlightPosition;
+import com.Kalschatzi.springbootapp.service.FlightPositionService;
+import com.Kalschatzi.springbootapp.model.FlightPosition;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
