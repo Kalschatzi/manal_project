@@ -1,0 +1,9 @@
+wrapper {
+    gradleVersion = 8.12
+}
+
+task testPrint{
+    doLast {
+        println("This is a test")
+    }
+}
