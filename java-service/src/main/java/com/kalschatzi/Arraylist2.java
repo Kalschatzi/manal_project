@@ -1,3 +1,4 @@
+
 package com.kalschatzi;
 import java.util.*;
 // Arraylist implementation
@@ -142,6 +143,7 @@ public class Arraylist2<E> implements List<E>{ // generic type 'E' allowing the 
                 }
             }
 
+
         }
         else{
             for (int i = size - 1; i >= 0; i--){
@@ -152,6 +154,7 @@ public class Arraylist2<E> implements List<E>{ // generic type 'E' allowing the 
         }
         return -1;
     }
+
 
     @Override
     public ListIterator<E> listIterator() {
