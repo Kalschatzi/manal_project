@@ -8,8 +8,10 @@ spring:
   flyway:
     locations: classpath:/db/migration
     enabled: true
+    baseline-on-migrate: true
+    schemas: public
   datasource:
     driverClassName: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/flight_positions
+    url: jdbc:postgresql://localhost:5432/flight_tracker
     username: postgres
     password: password

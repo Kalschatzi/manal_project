@@ -1,20 +1,26 @@
 package com.Kalschatzi.springbootapp.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@Table(name = "flight")
+@Table(name = "flights")
 public class Flight {
     @Id
-    private String icao24;
-    private String callsign;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String icao24; // Unique aircraft ID from OpenSky
+    private String callsign; // flight number
     private String originCountry;
+
+    // one flight has many positions
+    @OneToMany(mappedBy = "flight", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<FlightPosition> positions;
 }
