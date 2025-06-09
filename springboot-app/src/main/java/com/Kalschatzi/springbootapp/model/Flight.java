@@ -19,8 +19,5 @@ public class Flight {
     private String icao24; // Unique aircraft ID from OpenSky
     private String callsign; // flight number
     private String originCountry;
-
-    // one flight has many positions
-    @OneToMany(mappedBy = "flight", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<FlightPosition> positions;
 }
