@@ -21,13 +21,14 @@ public class FlightService{
     }
 
     public Flight getFlightByIcao24(String icao24) {
-        Optional<Flight> optionalFlight = flightRepo.findByIcao24(icao24);
-        if (optionalFlight.isPresent()){
-            return optionalFlight.get();
-        } else {
-            log.info("Flight with Icao24: {} doesn't exist. icao24");
-            return null;
-        }
+        return flightRepo.findByIcao24(icao24).orElse(null);
+//        Optional<Flight> optionalFlight = flightRepo.findByIcao24(icao24);
+//        if (optionalFlight.isPresent()){
+//            return optionalFlight.get();
+//        } else {
+//            log.info("Flight with Icao24: {} doesn't exist. icao24");
+//            return null;
+//        }
     }
 
 

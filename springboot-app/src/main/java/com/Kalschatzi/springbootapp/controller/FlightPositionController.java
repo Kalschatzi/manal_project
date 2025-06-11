@@ -26,4 +26,9 @@ public class FlightPositionController {
         return ResponseEntity.ok().body(flightPositionService.getPositionByIcao24(icao24));
     }
 
+    @GetMapping("/callsign/{callsign}")
+    public ResponseEntity<List<FlightPosition>> getFlightByCallsign(@PathVariable String callsign){
+        return ResponseEntity.ok().body(flightPositionService.getPositionByCallsign(callsign));
+    }
+
 }

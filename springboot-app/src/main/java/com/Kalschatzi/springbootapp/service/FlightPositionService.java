@@ -22,4 +22,8 @@ public class FlightPositionService {
     public List<FlightPosition> getPositionByIcao24(String icao24){
         return flightPositionRepo.findByIcao24(icao24);
     }
+
+    public List<FlightPosition> getPositionByCallsign(String callsign){
+        return flightPositionRepo.findByCallsign(callsign);
+    }
 }

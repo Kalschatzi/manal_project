@@ -11,17 +11,24 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Table(name = "flight_positions")
+@Table(name = "flight_position")
 public class FlightPosition {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Flight flight;
+
+//    private Flight flight;
+
     private String icao24; // Unique aircraft ID from OpenSky
+
+    @Column(name = "callsign")
     private String callsign; // flight number
-    private float latitude;
-    private float longitude;
-    private float baroAltitude;
+    private double latitude;
+    private double longitude;
+
+    @Column(name = "altitude")
+    private double baroAltitude;
+
     private LocalDateTime timestamp;
 
 }
