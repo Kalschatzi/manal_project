@@ -1,4 +1,4 @@
-package com.Kalschatzi.springboot_app;
+package com.Kalschatzi.springbootapp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
