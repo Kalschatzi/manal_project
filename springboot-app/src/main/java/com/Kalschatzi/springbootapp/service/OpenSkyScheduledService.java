@@ -77,19 +77,19 @@ public class OpenSkyScheduledService {
                         });
 
                 // create position object
-                FlightPosition position = new FlightPosition();
-//                position.setFlight(flight);
-                position.setIcao24(icao24);
-                position.setCallsign(callsign);
-                position.setLatitude(latitude);
-                position.setLongitude(longitude);
-                position.setBaroAltitude(baroAltitude);
-                position.setTimestamp(timestamp);
-
-                flightPositionRepo.save(position);
+//                FlightPosition position = new FlightPosition();
+////                position.setFlight(flight);
+//                position.setIcao24(icao24);
+//                position.setCallsign(callsign);
+//                position.setLatitude(latitude);
+//                position.setLongitude(longitude);
+//                position.setBaroAltitude(baroAltitude);
+//                position.setTimestamp(timestamp);
+//
+//                flightPositionRepo.save(position);
 
                 // simple logging for monitoring purposes
-                System.out.println("Saved flight position for callsign: " + callsign);
+//                System.out.println("Saved flight position for callsign: " + callsign);
             }
         }
     }
